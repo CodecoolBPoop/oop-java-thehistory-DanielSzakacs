@@ -3,7 +3,9 @@ package com.codecool.thehistory;
 import java.util.Arrays;
 import java.io.BufferedReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.io.FileReader;
+import java.util.List;
 
 public class TheHistoryArray implements TheHistory {
 
@@ -14,6 +16,7 @@ public class TheHistoryArray implements TheHistory {
 
     @Override
     public void add(String text) {
+        // TODO refactor
         int newListSize = wordsArray.length;
         String[] tempList = new String[newListSize];
 
@@ -31,7 +34,9 @@ public class TheHistoryArray implements TheHistory {
 
     @Override
     public void removeWord(String wordToBeRemoved) {
-        //TODO: check the TheHistory interface for more information
+        List<String> list = new ArrayList<>(Arrays.asList(wordsArray));
+        list.remove(wordToBeRemoved);
+        wordsArray = list.toArray(new String[0]);
     }
 
     @Override
