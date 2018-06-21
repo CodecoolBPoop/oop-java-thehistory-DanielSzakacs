@@ -1,6 +1,9 @@
 package com.codecool.thehistory;
 
 import java.util.Arrays;
+import java.io.BufferedReader;
+import java.util.ArrayList;
+import java.io.FileReader;
 
 public class TheHistoryArray implements TheHistory {
 
@@ -11,7 +14,19 @@ public class TheHistoryArray implements TheHistory {
 
     @Override
     public void add(String text) {
-        //TODO: check the TheHistory interface for more information
+        int newListSize = wordsArray.length;
+        String[] tempList = new String[newListSize];
+
+        for(int i = 0; i < wordsArray.length; i++){
+            tempList[i] = wordsArray[i];
+        }
+
+        String[] wordsArray = new String[tempList.length + 1];
+
+        for(int i = 0; i < tempList.length; i++){
+            wordsArray[i] = tempList[i];
+        }
+        wordsArray[tempList.length] = text;
     }
 
     @Override
