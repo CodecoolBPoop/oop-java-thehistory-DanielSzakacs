@@ -47,7 +47,9 @@ public class TheHistoryArray implements TheHistory {
 
     @Override
     public void clear() {
-        //TODO: check the TheHistory interface for more information
+        List<String> list = new ArrayList<>(Arrays.asList(wordsArray));
+        list.clear();
+        wordsArray = list.toArray(new String[0]);
     }
 
     @Override
