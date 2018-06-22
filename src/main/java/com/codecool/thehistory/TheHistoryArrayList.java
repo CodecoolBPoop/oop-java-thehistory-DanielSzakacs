@@ -13,23 +13,23 @@ public class TheHistoryArrayList implements TheHistory {
 
     @Override
     public void add(String text) {
-        //TODO: check the TheHistory interface for more information
+        wordsArrayList.add(text);
     }
 
     @Override
     public void removeWord(String wordToBeRemoved) {
-        //TODO: check the TheHistory interface for more information
+        wordsArrayList.removeIf(word -> word.equals(wordToBeRemoved));
     }
 
     @Override
     public int size() {
-        //TODO: check the TheHistory interface for more information
-        return 0;
+
+        return wordsArrayList.size();
     }
 
     @Override
     public void clear() {
-        //TODO: check the TheHistory interface for more information
+        wordsArrayList.clear();
     }
 
     @Override
