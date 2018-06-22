@@ -18,18 +18,17 @@ public class TheHistoryLinkedList implements TheHistory {
 
     @Override
     public void removeWord(String wordToBeRemoved) {
-        //TODO: check the TheHistory interface for more information
+        wordsLinkedList.removeIf(word -> word.equals(wordToBeRemoved));
     }
 
     @Override
     public int size() {
-        //TODO: check the TheHistory interface for more information
-        return 0;
+        return wordsLinkedList.size();
     }
 
     @Override
     public void clear() {
-        //TODO: check the TheHistory interface for more information
+        wordsLinkedList.clear();
     }
 
     @Override
