@@ -34,6 +34,7 @@ public class TheHistoryArray implements TheHistory {
 
     @Override
     public void removeWord(String wordToBeRemoved) {
+        // TODO show to the mentor (megengedett hogy az array-t arrayList-é alakitsam?)
         List<String> list = new ArrayList<>(Arrays.asList(wordsArray));
         list.remove(wordToBeRemoved);
         wordsArray = list.toArray(new String[0]);
