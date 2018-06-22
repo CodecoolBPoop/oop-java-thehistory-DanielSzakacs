@@ -41,7 +41,12 @@ public class TheHistoryArrayList implements TheHistory {
 
     @Override
     public void replaceMoreWords(String[] fromWords, String[] toWords) {
-        //TODO: check the TheHistory interface for more information
+        //TODO: Show to the mentor
+        for (int word = 0; word < fromWords.length ; word++) {
+            try{
+                wordsArrayList.set(wordsArrayList.indexOf(fromWords[word]), toWords[word]);
+            }catch(Exception ignored){};
+        }
     }
 
     @Override
