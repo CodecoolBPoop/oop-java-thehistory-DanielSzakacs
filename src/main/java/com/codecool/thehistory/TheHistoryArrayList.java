@@ -45,7 +45,9 @@ public class TheHistoryArrayList implements TheHistory {
         for (int word = 0; word < fromWords.length ; word++) {
             try{
                 wordsArrayList.set(wordsArrayList.indexOf(fromWords[word]), toWords[word]);
-            }catch(Exception ignored){};
+            }catch(Exception ignored){
+
+            }
         }
     }
 
